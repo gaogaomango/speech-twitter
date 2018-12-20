@@ -8,6 +8,12 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
+    <Button
+        android:id="@+id/btnMoveToTimeline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Move to time line"/>
+
     <EditText
         android:id="@+id/sampleText"
         android:layout_width="match_parent"

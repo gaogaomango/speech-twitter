@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
-                // TODO: pause
+                // TODO: pause. use synthesizeToFile and MediaPlayer
                 if (tts.isSpeaking()) {
                     tts.stop()
                 }
