@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnMoveToTimeline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Move to time line"/>
+
+    <EditText
+        android:id="@+id/sampleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="And what is love? It is a doll dressed up
+For idleness to cosset, nurse, and dandle;
+A thing of soft misnomers, so divine
+That silly youth doth think to make itself
+Divine by loving, and so goes on
+Yawning and doting a whole summer long,
+Till Miss's comb is made a perfect tiara,
+And common Wellingtons turn Romeo boots;
+Till Cleopatra lives at Number Seven,
+And Antony resides in Brunswick Square.
+" />
+    <Button
+        android:id="@+id/btnSpeechText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Speech"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Speech Speed" />
+
+    <SeekBar
+        android:id="@+id/speechSpeedSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
