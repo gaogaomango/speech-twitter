@@ -12,7 +12,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
             android:id="@+id/username"
@@ -24,6 +24,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="tweets content"/>
+        <TextView
+            android:id="@+id/favariteCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="tweets content"/>
+        <Button
+            android:id="@+id/replyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reply"/>
+
     </LinearLayout>
 
 </LinearLayout>
