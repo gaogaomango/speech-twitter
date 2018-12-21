@@ -2,10 +2,7 @@ package jp.co.mo.speechtwitter
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.FloatingActionButton
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
-import android.view.View
 import android.widget.Toast
 import com.twitter.sdk.android.core.*
 import com.twitter.sdk.android.core.models.Tweet
@@ -32,11 +29,22 @@ class TimeLineActivity : AppCompatActivity() {
 
         setSupportActionBar(toolBar)
         fabActionBtn.setOnClickListener({
-            Snackbar.make(it, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show()
+            val intent = Intent(applicationContext, PostTweetActivity::class.java)
+            startActivity(intent)
         })
 
         tweetList = ArrayList<Tweet>()
-        tweetAdapter = TweetAdapter(this, tweetList)
+        tweetAdapter = TweetAdapter(
+                this,
+                tweetList,
+                tweetAdapterListener = object: TweetAdapterListener{
+                    override fun onClickReplyButton(tweet: Tweet) {
+                        val intent = Intent(applicationContext, PostTweetActivity::class.java)
+                        intent.putExtra(PostTweetActivity.KEY_REPLY_TO_STATUS_ID, tweet.id)
+                        startActivity(intent)
+                    }
+                }
+        )
         lvTimeLine.adapter = tweetAdapter
 
         getHomeTimeLine()
